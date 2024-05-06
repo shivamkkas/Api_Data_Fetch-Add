@@ -14,14 +14,14 @@ const renderList = (users) => {
 
   let html = "";
 
-  for (let i = 0; i < users.length; i++) {
-    const unitData = users[i];
+  users.forEach((item)=>{
+    const unitData = item;
     html += `<div id="card">
         <h2>Uesr Id: ${unitData.id}</h2>
         <h1 style="font-size: 20px">Username: ${unitData.name}</h1>
         <h3>Age: ${unitData.age}</h3>
       </div>`;
-  }
+  })
   userList.innerHTML = html;
 };
 
@@ -54,3 +54,4 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   //-----------------------------
 });
+
